@@ -1,0 +1,335 @@
+@media(max-width:1400px){
+.containerFull { padding: 0 50px; }	
+.reviewSection .elementor-swiper-button{}
+.reviewSection .elementor-swiper-button.elementor-swiper-button-prev { left: 3px !important; }
+.reviewSection .elementor-swiper-button.elementor-swiper-button-next{right:3px !important;}
+	
+}
+
+@media(max-width:1365px){
+
+.header .logo { max-width: 250px; padding-left: 50px; }
+
+.header .mainNav { padding-right: 0; position: absolute; left: 0; top: 36px;}
+
+.header .mainNav ul li { padding-left: 0; display:block; }
+.header .mainNav ul li a { font-size: 14px; color: #FFF;}
+
+/* ------------------------- */
+
+.mainNav .mobile-btn{width: 30px;display: inline-block;height: 17px;position: relative;z-index: 99;cursor: pointer;transition: 0.3s ease-in-out;}
+.mainNav .mobile-btn:after{content:'';width: 30px; background: #000; display: inline-block; height: 2px;position: absolute;top: 12px;transition: 0.3s ease-in-out;}
+.mainNav .mobile-btn:before{content:'';width: 30px; background: #000; display: inline-block; height: 2px;position: absolute;left: 0;top: 0;transition: 0.3s ease-in-out;}
+.mainNav .mobile-btn span{width: 30px; background: #000; display: inline-block; height: 2px;cursor: pointer;position: absolute;left: 0;top: 6px;}
+
+.mainNav.showNav .mobile-btn span{background: none;}
+.mainNav.showNav .mobile-btn{position: fixed;left: 303px;top: 30px;background: none;z-index: 99;transition: 0.3s ease-in-out;}
+.mainNav.showNav .mobile-btn:after{transform: rotate(-45deg);top: -1px;background: #FFF;transition: 0.3s ease-in-out;}
+.mainNav.showNav .mobile-btn:before{transform: rotate(45deg);top: -1px;background: #FFF;transition: 0.3s ease-in-out;}
+
+.mainNav .menu-header_menu-container { padding: 20px 0px 35px 0px; position: fixed; background: #000; left: -100%; top: 0; z-index: 99; bottom: 0; max-width: 300px; width: 100%;}
+.mainNav.showNav .menu-header_menu-container{ left: 0%; transition: 0.3s ease-in-out;} 
+
+.mainNav .menu-header_menu-container .menu li{padding-bottom: 0;}
+.mainNav .menu-header_menu-container .menu li a{ font-size: 14px; 	color: #FFF; 	width: auto; 	display: inline-block; 	padding: 10px;}
+
+.opacityBg{overflow:hidden;}
+.opacityBg:before { content: ''; background: rgb(0 0 0 / 78%); width: 100%; display: inline-block; position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 9; } 
+
+
+body .header .mainNav .menu-header_menu-container .menu li .sub-menu{display: none!important; 	position: initial; 	opacity: initial; padding: 7px 0;background: #333;visibility: initial;border-top: 0px solid #fff;}
+.header .mainNav .menu-header_menu-container .menu li .sub-menu li { display: block; padding: 6px 15px; }
+.header .mainNav .menu-header_menu-container .menu li .sub-menu-toggle { display: block; position: absolute; top: 13px; right: 41px; border: none; }
+.header .mainNav .menu-header_menu-container .menu li .sub-menu-toggle:after { border-top: 2px solid #fff; border-left: 2px solid #fff;transition: 0.3s ease-in-out; }
+.header .mainNav .menu-header_menu-container .menu li.active-nav .sub-menu-toggle:after { transform: rotate(47deg); top: 6px; transition: 0.3s ease-in-out;}
+.header .mainNav .menu-header_menu-container .menu li .sub-menu li a{padding: 2px 0px;    margin-bottom: 0;}
+.header .mainNav .menu-header_menu-container .menu li .sub-menu .sub-menu{background: #000; margin-top: 4px;}
+.header .mainNav .menu-header_menu-container .menu li.menu-item-has-children { padding-bottom: 0; }
+.header .mainNav .menu-header_menu-container .menu li.active-nav .sub-menu{display: block !important ; }
+
+
+
+
+
+.blogtemplate { padding: 0 15px; }
+
+
+/* hero banner */
+.mainSlider .item::after { max-width: 57%; }
+.mainSlider .sliderText .content h1 { font-size: 40px; line-height: normal; }
+.mainSlider .sliderText .content .formSearch .control input {height: 50px;}
+.mainSlider .sliderText .content .formSearch .control button {background: var(--secondary); right: 5px; height: 40px; }
+.mainSlider .sliderText .content .links a { font-size: 17px; }
+
+.mainSlider .sliderText .content p{ margin-top: 0;}
+
+.mainSlider .heroSlider .item img{}	
+
+.LearningImmersion { margin-top: 0 !important;}
+
+
+
+}
+
+
+@media(max-width:991px){
+	
+.header .mainNav {  left: 0; top: 36px; }
+
+	
+p{ font-size: 14px; line-height: normal; }
+
+.mainSlider .heroSlider .item img { height: 400px;	object-fit: cover; }
+.mainSlider .sliderText .content h1 { font-size: 30px; }
+.mainSlider .sliderText .content { max-width: 475px; }
+.mainSlider .sliderText .content p { margin-top: 10px; line-height: normal; }
+.WelcomeWrap .leftPart .imgblock1 .experience1 {  text-align: left;padding: 20px 0px 20px 70px;  }
+.WelcomeWrap { display: initial; }
+.WelcomeWrap .leftPart .imgblock1 .experience p { font-size: 20px; margin-bottom: 4px;}
+.WelcomeWrap .leftPart .imgblock1 .experience h6 { letter-spacing: 5px; }
+
+.WelcomeWrap .leftPart .imgblock1 .experience1 .thumbImg { left: 16px; }  
+
+.grayBg .courseWrap .titleHead,
+.courseWrap .elementor-widget-container .elementor-heading-title,
+.theme-ecamedicine .whyChoose .titleHead strong,
+.theme-ecamedicine .whyChoose .titleHead p,
+.WelcomeWrap .welcomeText h2,
+.reviewSection .titleb .titleHead,
+.ourCourse .leftPart .titleHead .elementor-heading-title,
+.courseWrap .elementor-widget-container h2{font-size: 30px !important; }
+.courseWrap .upcomingCourses .box h4 { font-size: 14px; }
+.ourCourse .rightPart{ max-width: 100%;}
+.ourCourse .leftPart{max-width: 100%; width: 100%;}
+
+.whyChoose .titleHead strong { display: inline; }
+
+.grayBg .blogWrap .block .content h4 { font-size: 18px;}
+
+.reviewSection .swiper-wrapper .swiper-slide {  }
+.reviewSection .swiper-wrapper .swiper-slide .elementor-testimonial{ box-shadow: 0px 3px 26px rgb(2 122 251 / 11%); padding: 16px 27px; }
+.testimonial-slider .swiper-slide-active + .swiper-slide-next{box-shadow: 0px 0px 0px rgb(2 122 251 / 11%)}
+  
+.newletter .newsletterForm { max-width: 455px; }
+.newletter .text { font-size: 18px; }
+
+.courseWrap .upcomingCourses { gap: 15px; }
+.courseWrap figure.swiper-slide-inner .elementor-image-carousel-caption h4 { font-size: 16px; line-height: 22px; margin-bottom: 6px; }
+.courseWrap figure.swiper-slide-inner .elementor-image-carousel-caption p { font-size: 13px; line-height: normal; }
+
+
+.whychoseText {padding: 0 0 20px 0 !important;background: transparent;min-height: initial !important; }
+.whychoseText .e-con-boxed{width: auto;}
+
+.PersonalizedTraining {  min-height: initial; }
+
+
+
+.counthistory .e-con-inner { display: grid; grid-template-columns: repeat(2, 1fr) !important; }
+.countBg .elementor-counter .elementor-counter-title{ font-size: 13px !important; min-height: 47px; font-weight: normal !important; 	text-align: left; 	display: block;}
+.countBg .elementor-counter .elementor-counter-number { font-size: 30px; }
+.countBg .elementor-counter .elementor-counter-number-suffix { font-size: 27px !important; }
+
+
+.brandLogo .ScientificPartners h3 { font-size: 20px; }
+
+
+/* regenerative-injectables   */
+  
+.blogtemplate .all-hand-btn { margin-top: 0; }
+.ElevateBlock .contentBg .textWrap { text-align: center; margin-top: 23px; margin-left: 0; }
+.ElevateBlock .contentBg .textWrap h4 { font-size: 18px; text-align: center; }
+
+
+/* checkout */
+.wc-block-components-sidebar-layout .wc-block-components-main { width: 57%!important; }
+.wc-block-components-sidebar { width: 40%!important; }
+
+
+
+
+
+
+
+}  
+
+
+@media(max-width:767px){
+.mainSlider .item::after { max-width: 100%; }
+.mainSlider .owl-nav button span { line-height: 22px; }
+	
+	
+	
+header .containerFull { padding: 0 20px; }
+.header .logo { max-width: 160px; padding-left: 50px; }
+.header .mainNav { top: 28px; }
+
+.countBg .elementor-counter .elementor-counter-title { min-height: 72px;}
+
+.mainSlider .sliderText .content{margin-right: 30px; }
+.mainSlider .sliderText .content h1{ font-size: 20px; padding-right: 30px; }
+.mainSlider .sliderText .content p{font-size: 14px;}
+	
+.courseWrap figure.swiper-slide-inner .swiper-slide-image { padding-bottom: 73px; width: 100%; }	
+.footerMain { display: grid; grid-template-columns: repeat(1, 1fr); gap: 0; } 
+
+.upcomingCourses img { height: auto !important; max-width: 100% !important; }
+
+.welcomeSection { margin-top: 0; }
+.welcomeSection .leftPart { padding: 0; }
+.welcomeSection .WelcomeWrap { padding: 0; }
+.courseWrap .upcomingCourses{padding: 0;}
+.courseWrap h2{text-align:left;}
+
+.brand-logo-block .e-con-inner { display: grid; grid-template-columns: repeat(3, 1fr) !important; }
+
+.immediateClinical { min-height: initial; }
+
+.ScientificPartners .block { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; }
+ 
+.newletter {padding: 23px 30px 10px 30px; display: inline-block; width: -webkit-fill-available; }
+.newletter .newsletterForm { max-width: 100%; }
+.newletter .newsletterForm .tnp-subscription { margin: 20px 0 0 0; }
+
+.footerMain .block { margin-top: 30px; }
+.footerMain .block ul li {margin-bottom: 4px; }
+.footerMain .block ul li a{font-size:14px;}
+
+
+.copyright-block{text-align:center;}
+.copyright-block .ds,
+.copyright-block .copyright{float:none;}
+
+
+
+.ourCourse .rightPart { display: grid; grid-template-columns: repeat(2, 2fr); }
+.ourCourse .rightPart .box { width: 100%; }
+
+
+/* regenerative-injectables   */
+.SubHeroBar { padding: 0px 0 0px 0 !important; }
+.SubHeroBar .subBar .e-con-inner .leftPart { flex: auto; max-width: 100%; }
+.SubHeroBar .subBar .leftPart h2 { font-size: 20px; line-height: normal;}
+.coureseBlockText h2 { font-size: 25px; }
+.coureseBlockText h4 { font-size: 16px; }
+.highlightText ul li { font-size: 14px; }
+
+.rigsterBlockCourse .elementor-widget-woocommerce-product-images { height: auto !important; overflow: hidden; margin-bottom: 14px !important; }
+
+.LearningImmersion .content h2 { font-size: 25px; }
+.whyChooseWrap .swiper-slide h3{ font-size: 20px; font-weight: 500; line-height: normal; font-style: normal;}
+.whyChooseWrap h2 { font-size: 25px; }
+.whyChooseWrap .swiper-wrapper .swiper-slide:before { font-size: 30px; }
+.whyChooseWrap .swiper-wrapper .swiper-slide { padding: 28px 30px 35px 75px; margin: 25px 0 25px; min-height: initial; }
+
+.ThePros{  padding:0 15px !important;}
+.ThePros h2{ font-size: 25px;}
+
+.blogtemplate .all-hand-btn { align-self: center; }
+.blogtemplate h2 { font-size: 25px; } 
+.LearningImmersion .content { width: 100%; padding-right: 20px; }
+.LearningImmersion .blockImg { width: 100%; max-width: 100%; overflow: hidden; }
+
+.ElevateBlock .contentBg { padding-bottom: 30px; }
+.ElevateBlock .elevateImg { max-width: 100%; }
+.SubHeroBar .subBar .e-con-inner .rightTopSlider > .e-con-inner { float: none; width: auto; max-width: 100%; }
+.SubHeroBar .subBar > .e-con-inner { display: initial; flex-direction: initial !important; }
+.SubHeroBar .subBar .e-con-inner .rightTopSlider { flex: auto; max-width: 100%; }
+
+.LearningImmersion .content ul li { font-size: 14px; }
+
+.ElevateBlock { margin-top: 50px !important; margin-bottom: 30px !important; }
+
+
+/* Search result */
+.search-results article.product .wrap .entry-title { font-size: 20px; }
+.search-results article.product .wrap .post-thumbnail{width: 100%;}
+.search-results article.product .wrap .post-thumbnail a img { height: auto !important; max-width: 100% !important; }
+.search-results article.product .wrap .entry-content{width: 100%;font-size: 14px; }
+.search-results article.product .wrap .entry-content h2 { font-size: 16px;font-weight: 600; } 
+
+
+/* checkout */
+.wc-block-components-sidebar-layout .wc-block-components-main ,
+.wc-block-components-sidebar { width: 100%!important; }
+
+.wp-block-woocommerce-cart-order-summary-block { background: #fff; margin-bottom: 20px; box-shadow: 0 0 0 #f1f6fb; border: solid 0px #f2f2f2; }
+
+.woocommerce form .show-password-input::after, .woocommerce-page form .show-password-input::after { position: relative; top: 4px; }
+
+
+.BannerTop h1 { color: var(--whiteColor); font-size: 20px; margin-top: 15px;}
+
+
+ 
+ 
+.post-navigation .nav-links .meta-nav { align-items: center; justify-content: center; }
+ 
+
+ 
+.wc-block-grid__products .wc-block-grid__product-image{width:100%;}
+.wc-block-grid__products .wc-block-grid__product-image img { max-width: 100% !important; }
+
+.theme-ecamedicine .whyChoose .titleHead strong { display: inline-block;}
+.category-aesthetic-medicine .wrap h2 { font-size: 18px; } 
+
+
+
+.page-id-16074 h3 { font-size: 35px; }
+.page-id-16074 h3 svg { display:none;}
+
+.page-id-2787 h2 { font-size: 25px !important; }
+
+  
+.registrationWrap { margin: 50px 0 100px 0; }
+.registrationWrap .containerFull { padding: 0 20px; }
+.registrationWrap .registrationMain { flex-wrap: wrap; }
+.registrationWrap .registrationMain .registerImg, .registrationWrap .registrationMain .rigesterImg{display:none;}
+
+
+
+.detailTop .product_title { margin-top: 20px !important; font-size: 25px; }
+.detailTop .leftzoomImg { padding: 0; margin: 0; }
+.detailTop .leftzoomImg .woocommerce-product-gallery{  margin: 0 !important; }
+
+
+.reviewSection .elementor-testimonial__footer .elementor-testimonial__image img{ width: 40px!important;  height: 40px!important;} 
+.reviewSection .elementor-testimonial__footer .elementor-testimonial__name{ font-size:16px!important;} 
+.reviewSection .elementor-testimonial__footer .elementor-testimonial__title{ font-size:14px!important;} 
+
+
+.productPopup.show .footer-product .cart .quantity { display: inline-block; }
+.productPopup.show .footer-product .cart { padding-left: 88px; display: block; }
+.productPopup.show .footer-product h2{ margin-bottom: 0; font-size: 15px;}
+.productPopup.show .footer-product .cart { margin-top: 7px; }
+
+.ElevateBlock .contentBg .textWrap h4:after { width: 300px; }
+
+.woocommerce div.product div.images.woocommerce-product-gallery{ margin-bottom: 0;}
+
+ 
+}  
+
+@media(max-width:444px){
+.topbar .topLink { text-align: center; }
+.topbar .topLink a { display: block; margin: 4px 0 7px 0; }
+.mainSlider .sliderText .content .links a { font-size: 13px; margin: 0 7px; }
+
+.search-results .page-header .page-title { font-size: 25px; }
+
+.newletter {padding: 23px 18px 10px 18px; }
+.newletter .text { font-size: 14px; }
+.newletter .text::before{ margin-right: 8px; background-size: contain; width: 25px; height: 20px;}
+
+.newletter .newsletterForm form input{ font-size: 13px;}
+.newletter .newsletterForm form input[type="submit"]{ width: 115px;}
+
+.pagination .nav-links .page-numbers { font-size: 13px; padding: 3px 11px; }
+
+.elementor-grid-mobile-2 .elementor-grid { 	grid-template-columns: repeat(1, 1fr); }
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs { margin: 0; padding: 0; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li {  width: 100%; margin: 0; }
+
+}
