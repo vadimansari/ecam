@@ -1205,3 +1205,43 @@ function registration_errors_validation($reg_errors, $sanitized_user_login, $use
  * @snippet  Ajax count value in header section
  */
 
+ function custom_display_button_shortcode() {
+    // Start output buffering
+    ob_start();
+
+    // Check if the user is logged in
+    if (is_user_logged_in()) {
+        // Get the current user ID
+        $user_id = get_current_user_id();
+
+        // Get the meta key value from the usermeta table
+        $meta_key_value = get_user_meta($user_id, 'topic_product_data', true);
+		
+        if ($meta_key_value) {
+            // Unserialize the meta key value
+            $meta_data = maybe_unserialize($meta_key_value);
+			
+            // Get the current product ID (assuming this is within a WooCommerce product context)
+            if (is_singular('product')) {
+                global $post;
+                $current_product_id = $post->ID;
+
+                // Check if the meta_data contains the correct product_id
+                if (is_array($meta_data) && 
+                    isset($meta_data['product_id']) && 
+                    $meta_data['product_id'] != $current_product_id) {
+                    // Output the content if it matches
+                    echo '<div class="elementor-element elementor-element-47430f03 elementor-widget elementor-widget-button"><div class="elementor-widget-container"><div class="elementor-button-wrapper"><a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+					<span class="elementor-button-content-wrapper">
+								<span class="elementor-button-text">Register Now</span>
+				</span>
+				</a></div></div></div>';
+                }
+            }
+        }
+    }
+
+    // Return the output
+    return ob_get_clean();
+}
+add_shortcode('custom_button', 'custom_display_button_shortcode');

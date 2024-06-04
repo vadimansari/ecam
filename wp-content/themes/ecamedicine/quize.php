@@ -14,7 +14,7 @@ get_header();
 
 <?php
 
-if (!is_user_logged_in()) {
+//if (!is_user_logged_in()) {
 ?>
     <?php
     if (isset($_GET['topicID'])) {
@@ -27,7 +27,8 @@ if (!is_user_logged_in()) {
         echo "No Topic ID found.";
     }
 	$product_id = $_SESSION['product_id'];
-	//echo $product_id;
+    $precentage_required = $_SESSION['precentage_required'];
+	//echo $precentage_required;
     ?>
 
     <?php
@@ -71,14 +72,16 @@ if (!is_user_logged_in()) {
                                     <?php while (have_rows('add_options')) : the_row();
                                         $option_title = get_sub_field('option_title');
                                         $range = get_sub_field('range'); ?>
-                                        <div class="options">
+                                        <div class="options" data-range="<?php echo $range; ?>">
                                             <?php echo $option_title; ?>
+                                            <?php  echo $range; ?>
                                         </div>
                                     <?php endwhile; ?>
                                 </div>
                             <?php else : ?>
                                 <p>No options available.</p>
                             <?php endif; ?>
+                            <?php echo $precentage_required; ?>
                             <div class="action">
                                 <?php if ($i == 1) { ?>
                                     <a class="next-step btnBorder">Next</a>
@@ -102,6 +105,7 @@ if (!is_user_logged_in()) {
                             <?php }?>
                         </div>
                     </div>
+                   
                 </div>
             <?php $i++;
             }
@@ -109,7 +113,9 @@ if (!is_user_logged_in()) {
         } else {
             echo 'No questions found.';
         } ?>
+        
     </div>
+    
 </div>
 <style>
     .form-step {
@@ -167,12 +173,32 @@ if (!is_user_logged_in()) {
     submitButton.click(function() {
         // Check if any option is selected before submitting
         var options = $('.form-step.active .options.active');
-        if (options.length > 0) {
+        var topicID = <?php echo json_encode($topicID); ?>;
 
-            // Handle form submission
-            window.location.href = '/ecamedicine/student-registration/';
+        // Get the $precentage_required value
+        var precentageRequired = <?php echo json_encode($precentage_required); ?>;
+        //alert(precentageRequired);
 
-            popupOverlay.style.display = 'none';
+
+        if (options.length > 0 ) {
+            var totalRange = 0;
+            $('.options.active').each(function() {
+                totalRange += parseInt($(this).data('range'));
+            });
+
+            if (totalRange >= precentageRequired) {
+                window.location.href = '/ecamedicine/student-registration/';
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Not Qualified',
+                    text: 'You did not qualify for registration.'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = '/ecamedicine/quiz-page/?topicID=' + topicID;
+                    }
+                });
+            }
         } else {
             Swal.fire({
                 icon: 'warning',
@@ -186,6 +212,7 @@ if (!is_user_logged_in()) {
 
     // Options selection logic
     $('.answerBox .options').click(function() {
+       
         // Remove active class from all options
         var parent = $(this).closest('.answerBox');
         parent.find('.options').removeClass('active');
@@ -196,6 +223,7 @@ if (!is_user_logged_in()) {
         selectedOptions[step - 1] = $(this).text().trim();
         // Update the selected options display
         selectedOptionsDisplay.text(selectedOptions.join(', '));
+        //alert(selectedOptions);
     });
 });
 
@@ -205,7 +233,7 @@ if (!is_user_logged_in()) {
 
 
     <?php } ?>
-<?php } ?>
+<?php // } ?>
 
 <?php
 get_footer();

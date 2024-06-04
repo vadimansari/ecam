@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post;
 session_start();
 $_SESSION['product_id'] = get_the_ID();
+$_SESSION['precentage_required'] = get_field('precentage-required');
 $short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
 
 if ( ! $short_description ) {
@@ -35,9 +36,10 @@ if ( ! $short_description ) {
 
 <?php
 // custom work
-if (!is_user_logged_in()) {
+//if (!is_user_logged_in()) {
     $topicID = get_field('select_topic');
-
+    
+    
     if ($topicID) {
 ?>
         <script type="text/javascript">
@@ -60,5 +62,5 @@ if (!is_user_logged_in()) {
 
 <?php
     }
-}
+//}
 ?>
